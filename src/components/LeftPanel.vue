@@ -2,7 +2,7 @@
 import { ref } from "vue";
 
 const logoUrl = ref(
-  "https://images.pexels.com/photos/268941/pexels-photo-268941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  "https://freedesignfile.com/upload/2021/09/Halloween-graveyard-mascot-logo-vector.jpg"
 );
 </script>
 
@@ -12,7 +12,7 @@ const logoUrl = ref(
       <h1 class="brand-name">qCreate</h1>
       <div class="logo-container">
         <img
-          src="https://images.pexels.com/photos/268941/pexels-photo-268941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://freedesignfile.com/upload/2021/09/Halloween-graveyard-mascot-logo-vector.jpg"
           alt="Logo"
           class="logo"
         />
@@ -30,7 +30,7 @@ const logoUrl = ref(
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: hidden;  
   padding: 24px;
 }
 

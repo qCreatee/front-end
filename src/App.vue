@@ -1,11 +1,10 @@
 <script setup>
-import RegistrationPage from './components/RegistrationPage.vue'
+// import RegistrationPage from "./components/RegistrationPage.vue";
+// import LoginPage from "./components/LoginPage.vue";
 </script>
 
 <template>
-  <RegistrationPage />
+  <router-view />
 </template>
 
-<style>
-
-</style>
+<style></style>

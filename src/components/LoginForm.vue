@@ -1,54 +1,43 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const username = ref('')
-const password = ref('')
-const confirmPassword = ref('')
+const username1 = ref("");
+const password1= ref("");
 
 const handleSubmit = () => {
-  console.log('Registration submitted')
-}
+  // This would contain login logic in a real app
+  console.log("Login submitted");
+};
 </script>
 
 <template>
   <div class="form-container">
     <div class="form-content">
       <h1 class="welcome-title">Welcome</h1>
-      <p class="register-text">PLEASE REGISTER</p>
-      
-      <form @submit.prevent="handleSubmit" class="registration-form">
+      <p class="login-text">PLEASE LOGIN</p>
+
+      <form @submit.prevent="handleSubmit" class="login-form">
         <div class="input-group">
-          <input 
-            type="text" 
-            v-model="username" 
+          <input
+            type="text"
+            v-model="username"
             placeholder="ENTER YOUR USERNAME"
             class="form-input"
-          >
+          />
         </div>
-        
+
         <div class="input-group">
-          <input 
-            type="password" 
-            v-model="password" 
+          <input
+            type="password"
+            v-model="password"
             placeholder="ENTER YOUR PASSWORD"
             class="form-input"
-          >
+          />
         </div>
-        
-        <div class="input-group">
-          <input 
-            type="password" 
-            v-model="confirmPassword" 
-            placeholder="CONFIRM YOUR PASSWORD"
-            class="form-input"
-          >
-        </div>
-        
-        <button type="submit" class="register-button">
-          Register
-        </button>
-        
-        <router-link to="/login" class="login-link">ALREADY HAVE ACCOUNT</router-link>
+
+        <button type="submit" class="login-button">Login</button>
+
+        <router-link to="/register" class="register-link">DOESN'T HAVE ACCOUNT</router-link>
       </form>
     </div>
   </div>
@@ -76,18 +65,17 @@ const handleSubmit = () => {
   text-align: center;
 }
 
-.register-text {
+.login-text {
   color: #666;
   text-align: center;
   margin-bottom: 32px;
   font-size: 0.9rem;
 }
 
-.registration-form {
+.login-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  
 }
 
 .input-group {
@@ -113,30 +101,29 @@ const handleSubmit = () => {
   color: #374151;
 }
 
-.register-button {
+.login-button {
   background-color: #7bac4a;
   color: white;
   border: none;
-
+  align-self: center;
   padding: 16px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   margin-top: 16px;
-  width: 200px;         
-  align-self: center;
+  width: 200px;
 }
 
-.register-button:hover {
+.login-button:hover {
   background-color: #6a9b39;
   transform: translateY(-2px);
 }
 
-.register-button:active {
+.login-button:active {
   transform: translateY(0);
 }
 
-.login-link {
+.register-link {
   text-align: center;
   margin-top: 24px;
   color: #666;
@@ -146,7 +133,7 @@ const handleSubmit = () => {
   text-decoration: none;
 }
 
-.login-link:hover {
+.register-link:hover {
   color: #7bac4a;
 }
 
@@ -154,7 +141,7 @@ const handleSubmit = () => {
   .form-container {
     padding: 40px 0;
   }
-  
+
   .welcome-title {
     font-size: 2rem;
   }
